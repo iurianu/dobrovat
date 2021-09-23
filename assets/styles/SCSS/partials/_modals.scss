@@ -1,0 +1,37 @@
+#info-modal {
+    .modal-title {
+        @extend %auto-margin;
+        @extend %full-width;
+        @extend %center-align;
+    }
+    .content {
+        display: none;
+        ul {
+            padding-left: 10px;
+            li {
+                @extend %pos-relative;
+                &:before {
+                    @extend %pos-absolute;
+                    left: -15px;
+                    content: '\2713';
+                }
+            }
+        }
+    }
+}
+
+.modal-dialog {
+    .modal-content {
+        max-height: 90vh;
+        .modal-body {
+            max-height: calc(100% - 110px);
+            overflow-y: auto;            
+        }
+    }
+    @include media-min-768px {
+        max-width: 700px;
+    }
+    @include media-min-992px {
+        max-width: 920px;
+    }
+}
