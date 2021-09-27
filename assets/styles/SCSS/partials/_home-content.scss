@@ -176,16 +176,14 @@ main {
                 }
             }
             &.sub-list {
-                &.open {
-                    &:after {
-                        @extend %pos-absolute;
-                        content: '\2192';
-                        right: 20px;
-                        top: 10px;
-                        color: $theme-link-color;
-                    }
-                }
-                .sub-nav {
+                 &:after {
+                    @extend %pos-absolute;
+                    content: '\2192';
+                    right: 20px;
+                    top: 10px;
+                    color: $theme-link-color;
+                 }
+                 .sub-nav {
                     @extend %pos-absolute;
                     @extend %display-block;
                     width: 250px;

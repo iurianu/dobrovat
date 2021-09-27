@@ -14,7 +14,7 @@ jQuery.noConflict();
 jQuery(document).ready(function( $ ) {
     
     $('body').bsgdprcookies();    
-    $('body').append('<aside id="cookie-cog"><a href="#" rel="tag" title="Apasă pentru a modifica setările Cookie" data-toggle="tooltip" data-placement="left">&#9881;</a></aside>'); 
+    $('body').append('<aside id="cookie-cog"><a href="#" role="button" rel="tag" title="Apasă pentru a modifica setările Cookie" data-toggle="modal" data-target="#bs-gdpr-cookies-modal">&#9881;</a></aside>'); 
     $("#cookie-cog").on('click', function() {
         $('body').bsgdprcookies();
     });
@@ -188,9 +188,9 @@ jQuery(document).ready(function( $ ) {
                 $('label[name="bsgdpr[]"]').tooltip({offset: '0, 10'});
 
                 // Show advanced checkboxes
-                $('#' + settings.id + '-advanced-types').slideDown('fast', function(){
+                /*$('#' + settings.id + '-advanced-types').slideDown('fast', function(){
                     $('#' + settings.id + '-advanced-btn').prop('disabled', true);
-                });
+                });*/
 
                 // Scroll content to bottom if scrollbar option is active
                 if(settings.messageScrollBar == true) {

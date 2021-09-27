@@ -1,7 +1,7 @@
 jQuery.noConflict();
 
 jQuery(document).ready(function( $ ) {
-    $('body').bsgdprcookies();
+    //$('body').bsgdprcookies();
     
     $('.sub-list').hover( function() {
         $(this).toggleClass('open').children('.sub-nav').toggleClass('nav-open');
@@ -27,8 +27,8 @@ jQuery(document).ready(function( $ ) {
     })
 });
 
-jQuery(document).on('change', function() {
-    if ($('.navbar-toggler').attr('aria-expanded') == 'false') {
+jQuery(document).on('change', function( $ ) {
+    if ( $('.navbar-toggler').attr('aria-expanded') == 'false') {
             $('.navbar-expand-md').css('width', '100%');
         } else {
             $('.navbar-expand-md').css('width', 'auto');
